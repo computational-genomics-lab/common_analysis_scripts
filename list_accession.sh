@@ -14,6 +14,8 @@ while IFS= read -r accession; do
 
     mv ncbi_dataset.zip "$accession".zip
 
-    echo "Downloaded: $accession.zip"
+    unzip "$accession".zip
+
+    echo "Downloaded: $accession ..."
 
 done < list_accession_numbers
